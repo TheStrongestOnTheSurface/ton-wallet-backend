@@ -14,7 +14,7 @@ var Proof = struct {
 	PayloadSignatureKey string `env:"TONPROOF_PAYLOAD_SIGNATURE_KEY"`
 	PayloadLifeTimeSec  int64  `env:"TONPROOF_PAYLOAD_LIFETIME_SEC" envDefault:"300"`
 	ProofLifeTimeSec    int64  `env:"TONPROOF_PROOF_LIFETIME_SEC" envDefault:"300"`
-	ExampleDomain       string `env:"TONPROOF_EXAMPLE_DOMAIN" envDefault:"ton-connect.github.io"`
+	ExampleDomain       string `env:"TONPROOF_EXAMPLE_DOMAIN" envDefault:"coinpups-html.vercel.app"`
 }{}
 
 func LoadConfig() {

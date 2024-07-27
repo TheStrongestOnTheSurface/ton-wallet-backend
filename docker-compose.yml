@@ -1,0 +1,18 @@
+services:
+  ton-connect:
+    image: tsots-ton-connect:v0.0.1
+    container_name: ton-connect
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 8018:8081
+    networks:
+      - nginx-proxy-manager_default
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  nginx-proxy-manager_default:
+    external: true
